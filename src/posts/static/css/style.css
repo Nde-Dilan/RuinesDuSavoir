@@ -1,0 +1,113 @@
+@import "reset.css";
+
+body{
+    background-color:skyblue;
+    font-family:sans-serif;
+    padding:10px;
+}
+nav{
+    margin:2rem;
+    display : flex;
+    justify-content: space-between;
+}
+
+#blog{
+    display : flex;
+    flex-direction:column;
+    align-items:center;
+    margin:9px;
+    justify-content: space-between;
+}
+main{
+
+}
+article{
+padding: 10px;
+border-radius:15px;
+    background-color:gray;
+    width:52%;
+    margin:10px auto;
+}
+
+@media (max-width : 1024px){
+article{
+padding: 8px;
+    border-radius:15px;
+    border:1.5px solid white;
+    width:82%;
+    margin:10px auto;
+}
+}
+
+.post-title{
+display : flex;
+    align-items:center;
+}
+
+.post-title a{
+color:steelblue;
+font-weight:bold;
+text-decoration:none;
+list-style:nome;
+}
+.post-title a:last-child{
+    color:red;
+    font-family:impact;
+    font-size:18px;
+}
+.post-title a:first-child{
+    color:lightgreen;
+    font-family:impact;
+    font-size:18px;
+    font-weightbold;
+}
+.btn{
+border-radius:5px;
+padding:8px;
+margin:8px;
+border: none;
+cursor:pointer;
+color:white;
+font-weight:bold;
+    background-color:blue;
+
+}
+.btn-submit{
+    background-color:;
+}
+.btn-delete{
+    background-color:indianred;
+
+}
+.post-author{
+    margin:.5rem 0;
+    font-family:impact;
+    letter-spacing:2px;
+    color:black;
+}
+.post-detail{
+     display : flex;
+    flex-direction:column;
+    align-items:center;
+}
+textarea{
+    color:green;
+
+
+}
+input, textarea{
+    display: block;
+    padding:.52rem;
+    border-radius:14px;
+    margin:14px;
+    border:none;
+    font-size:1.0rem;
+    line-height:1.5;
+    min-width:500px;
+}
+label {
+    display:inline-block;
+    box-sizing:border-box;
+    font-size:1.20rem;
+    font-family:Lucida;
+}

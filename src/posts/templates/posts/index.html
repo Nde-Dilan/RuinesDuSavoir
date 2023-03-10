@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title%}
+<title>Accueil du blog</title>
+{% endblock %}
+
+{% block content %}
+<h1>Le blog des Ruines du savoir</h1>
+<main >
+{% for post in posts %}
+<article>
+<div class ="post-title"> {% if request.user.is_authenticated %}
+    <a href="{% url 'posts:edit' post.slug %}">Editer</a><br>
+    <hr>
+    <a href="{% url 'posts:delete' post.slug %}">Supprime</a>
+
+    {% endif %}
+</div>
+
+    <div>
+        <h2 style="color:wheat;text-align:center;margin:40px;">{{ post.title|upper }}</h2>
+
+        <h5 class="post-author" style="color:white;">Publié par <i>{{post.author_or_default}}</i> le <small>{{post.created_on|date:'j F Y' }}</small></h5>
+    <p class="post-content">{{post.content|safe|truncatewords:30}}</p>
+</div>
+    <form action="{% url 'posts:detail' post.slug %}" >
+    <button class="btn btn-submit">Lire l'arlicle</button>
+        </form>
+</article>
+    {% endfor %}
+</main>
+{% endblock %}
