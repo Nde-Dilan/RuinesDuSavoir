@@ -17,6 +17,7 @@ class Blogpost(models.Model):
     published = models.BooleanField(default=False, verbose_name="Publié")
     content = models.TextField(blank=True, verbose_name="Contenu")
     thumbail = models.ImageField(blank=True, upload_to="blog")
+
     class Meta():
         ordering = ['-created_on']
         verbose_name = "Article"
