@@ -1,4 +1,6 @@
-
+"""La base de données a été changer en sqlite3 , donc la prochaine fois il faut faire un commit sur github puis faire un pull
+sur pythonanywhere avant de continuer à arranger notre webapp et aussi verifier les configurations necessaires en regardant les dernieres
+videos sur le deploiment """
 """
 Django settings for Django_blog project.
 
@@ -30,9 +32,9 @@ DEBUG = env.bool("DEBUG", False)
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
-print(DEBUG)
-print(ALLOWED_HOSTS)
-print(SECRET_KEY)
+# print(DEBUG)
+# print(ALLOWED_HOSTS)
+# print(SECRET_KEY)
 # Application definition
 
 INSTALLED_APPS = [
@@ -82,11 +84,8 @@ WSGI_APPLICATION = 'Django_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'dilan',
-        'PASSWORD': 'jhd,enfbdshfjzn',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3"
     }
 }
 
